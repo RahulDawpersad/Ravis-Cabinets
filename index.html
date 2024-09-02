@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Ravi's Cabinets</title>
+  <meta name="description"
+    content="Ravi's cabinets specializes in custom-built kitchen cabinets, bedroom cupboards, pub furniture, and quality laminated flooring to enhance your living spaces." />
+  <meta name="author" content="Developed By Rahul Dawpersad" />
+
+  <!-- Favicons
+    ================================================== -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css" />
+
+  <!-- Stylesheet
+    ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css" />
+  <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+  <style>
+     .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    .contact-sidebar,
+    .contact-form {
+      /* background-color: #fff; */
+      background: #ede6de;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-sidebar {
+      flex: 1;
+      max-width: 300px;
+      min-width: 250px;
+    }
+
+    .contact-form {
+      flex: 2;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .contact-sidebar h3,
+    .contact-form h2 {
+      margin-top: 0;
+    }
+
+    .contact-sidebar p {
+      font-family: "Open Sans", sans-serif;
+      font-weight: normal;
+      margin: 10px 0;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      color: #000;
+      font-weight: bold;
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: #9E683F;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #d19465;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+    /* Modal styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-sidebar,
+      .contact-form {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+
+<body id="page-top" data-spy="scroll">
+  <!-- Navigation
+    ==========================================-->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo/Top_Logo.png" alt="DesignX Logo" />
+      </a>
+      <input class="menu-btn" type="checkbox" id="navbar-toggle" />
+      <label class="menu-icon" for="navbar-toggle">
+        <span class="navicon"></span>
+      </label>
+      <!-- <nav> -->
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <!-- <li><a href="#testimonials">Testimonials</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      <!-- </nav> -->
+    </div>
+  </header>
+
+  <!-- hero Section -->
+  <header id="home">
+    <div class="intro">
+      <div class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="intro-text">
+              <h1>TRANSFORM YOUR SPACE</h1>
+              <p>Custom Cabinets Tailored To Your Needs.</p>
+              <a href="#about" class="btn btn-custom btn-lg page-scroll">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End hero Section -->
+
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="section-title text-center center">
+        <h2>About Us</h2>
+        <hr />
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 text-center">
+          <img src="img/logo/logo1.jpeg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="about-text">
+            <!-- <h3>The Studio</h3> -->
+            <p>
+              From custom kitchens to stylish bedrooms, pubs, and beyond,
+              Ravi's Cabinets specializes in creating beautiful, functional
+              cabinets tailored to your needs. We also offer top-quality
+              laminated flooring solutions to complete your space. Our
+              expertise in crafting custom cabinets not only enhances the
+              functionality of your environment but also elevates its
+              aesthetic appeal. With years of hands-on experience in the
+              cabinet industry, our skilled team is committed to delivering
+              exceptional craftsmanship that meets your specific requirements.
+              We understand that each project is unique, and we work closely
+              with you to ensure that every detail is thoughtfully designed
+              and meticulously executed. Whether you're looking to revamp your
+              kitchen, upgrade your bathroom, or create a stylish storage
+              solution, our dedication to quality and precision ensures that
+              your vision comes to life beautifully.
+            </p>
+            <h3>Why Choose Us?</h3>
+            <div class="checklist-container">
+              <ul class="custom-checklist">
+                <li>Expert craftsmanship</li>
+                <li>Customized Designs</li>
+                <li>Durable Materials</li>
+                <li>Professional Installation</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div id="services">
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1 section-title text-center">
+        <h2>Our Services</h2>
+        <hr />
+        <p>
+          Innovative Services to Bring Your Vision to Life.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 service">
+          <img src="img/services/cabinet7.jpg" class="img-responsive" alt="Project Title" />
+          <h3>kitchen Cabinets</h3>
+          <p>
+            beautiful, functional cabinets that make your kitchen stand out.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 service">
+          <img src="img/services/cabinet17.jpg" class="img-responsive" alt="Project Title" />
+          <h3>Bedroom Built-In Cupboards</h3>
+          <p>
+            Custom-built cupboards that blend perfectly with your bedroom decore.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 service">
+          <img src="img/cabinet4.jpg" class="img-responsive" alt="Project Title" />
+          <h3>Pub Furniture</h3>
+          <p>
+            Stylish, durable furniture for your home or commercial pub.
+          </p>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 service">
+          <img src="img/services/laminatedflooring.jpg" class="img-responsive" alt="Project Title" />
+          <h3>laminated Flooring</h3>
+          <p>
+            Quality flooring solution that complete your space.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div id="projects">
+    <div class="container">
+      <div class="section-title text-center center">
+        <h2>Our Projects</h2>
+        <hr />
+        <p>
+          Designing and Creating: Explore Our Latest Creations and Achievements.
+        </p>
+      </div>
+      <!-- <div class="categories">
+          <ul class="cat">
+            <li>
+              <ol class="type">
+                <li>
+                  <a href="#" data-filter="*" class="active">All Projects</a>
+                </li>
+                <li><a href="#" data-filter=".residential">Residential</a></li>
+                <li><a href="#" data-filter=".office">Office</a></li>
+                <li><a href="#" data-filter=".commercial">Commercial</a></li>
+              </ol>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div> -->
+      <div class="row">
+        <div class="portfolio-items">
+
+          <div class="col-sm-6 col-md-4 col-lg-4 residential">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet1.jpg" data-lightbox-gallery="gallery1">
+                  <!-- <div class="hover-text">
+                      <h4>Project Name</h4>
+                    </div> -->
+                  <img src="img/services/cabinet1.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 residential">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet3.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet3.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 commercial">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet4.jpg" data-lightbox-gallery="gallery1">
+                  <!-- <div class="hover-text">
+                      <h4>Project Name</h4>
+                    </div> -->
+                  <img src="img/services/cabinet4.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 residential">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet5.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet5.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 residential">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet6.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet6.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 commercial">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet7.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet7.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet8.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet8.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet9.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet9.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 residential">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet10.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet10.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 commercial">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet11.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet11.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet12.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet12.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet13.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet13.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-4 residential">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet14.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet14.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet15.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet15.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet16.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet16.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet17.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet17.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet18.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet18.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet19.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet19.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet20.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet20.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet21.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet21.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet22.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet22.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet23.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet23.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-sm-6 col-md-4 col-lg-4 office">
+              <div class="portfolio-item">
+                <div class="hover-bg">
+                  <a
+                    href="img/services/cabinet23.jpg"
+                    data-lightbox-gallery="gallery1"
+                  >
+                    <img
+                      src="img/services/cabinet23.jpg"
+                      class="img-responsive"
+                      alt="Project Title"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div> -->
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet24.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet24.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet25.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet25.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet26.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet26.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet27.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet27.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet28.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet28.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet29.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet29.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 office">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet30.jpg" data-lightbox-gallery="gallery1">
+                  <img src="img/services/cabinet30.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-4 residential">
+            <div class="portfolio-item">
+              <div class="hover-bg">
+                <a href="img/services/cabinet1.jpg" data-lightbox-gallery="gallery1">
+                  <!-- <div class="hover-text">
+                      <h4>Project Name</h4>
+                    </div> -->
+                  <img src="img/services/cabinet1.jpg" class="img-responsive" alt="Project Title" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <!-- <div id="testimonials" class="text-center">
+      <div class="overlay">
+        <div class="container">
+          <div class="col-md-8 col-md-offset-2 section-title">
+            <h2>Meet the Team</h2>
+            <hr />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
+              dapibus leonec.
+            </p>
+          </div>
+          <div id="row">
+            <div class="col-md-3 col-sm-6 team">
+              <div class="thumbnail">
+                <img src="img/team/01.jpg" alt="..." class="team-img" />
+                <div class="caption">
+                  <h3>John Doe</h3>
+                  <p>Director</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 team">
+              <div class="thumbnail">
+                <img
+                  src="img/team/02.jpg"
+                  alt="..."
+                  class="img-circle team-img"
+                />
+                <div class="caption">
+                  <h3>Mike Doe</h3>
+                  <p>Senior Designer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 team">
+              <div class="thumbnail">
+                <img
+                  src="img/team/03.jpg"
+                  alt="..."
+                  class="img-circle team-img"
+                />
+                <div class="caption">
+                  <h3>Jane Doe</h3>
+                  <p>Senior Designer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 team">
+              <div class="thumbnail">
+                <img
+                  src="img/team/04.jpg"
+                  alt="..."
+                  class="img-circle team-img"
+                />
+                <div class="caption">
+                  <h3>Karen Doe</h3>
+                  <p>Project Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <div class="container">
+      <!-- <div class="section-title text-center">
+        <h2>Contact Us</h2>
+        <hr />
+        <p>
+          Reach Out to Us Anytime — We’re Here to Assist You.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h3>Contact Info</h3>
+        <div class="contact-item">
+          <span>Address</span>
+          <p>
+            Durban,<br />
+            KZN, South Africa
+          </p>
+        </div>
+        <div class="contact-item">
+          <span>Phone / Whatsapp</span>
+          <p>+27 82 689 0050</p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h3>Leave us a message</h3>
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form id="contact-form">
+            <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+            <div id="nameError" class="error-message"></div>
+
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <div id="emailError" class="error-message"></div>
+
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <div id="messageError" class="error-message"></div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div id="successModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeSuccessModal">&times;</span>
+            <p>Your message has been sent successfully!</p>
+          </div>
+        </div>
+
+        <div id="errorModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeErrorModal">&times;</span>
+            <p>Failed to send message. Please try again later.</p>
+          </div>
+        </div>
+
+      </div> -->
+      <div class="section-title text-center">
+        <h2>Contact Us</h2>
+        <hr />
+        <p>
+          Reach Out to Us Anytime — We’re Here to Assist You.
+        </p>
+      </div>
+
+      <div class="form-container">
+        <div class="contact-sidebar">
+            <h3>Contact Details</h3>
+            <p><strong>Phone / Whatsapp</strong> <br /> +27 82 689 0050</p>
+            <!-- <p><strong>Email:</strong> contact@example.com</p> -->
+            <p><strong>Address:</strong> <br /> Durban, Kwazulu Natal, South Africa</p>
+        </div>
+    
+        <div class="contact-form">
+            <!-- <h2>Contact Us</h2> -->
+            <form id="contact-form">
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                <div id="nameError" class="error-message"></div>
+    
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <div id="emailError" class="error-message"></div>
+    
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <div id="messageError" class="error-message"></div>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSuccessModal">&times;</span>
+            <p>Your message has been sent successfully!</p>
+        </div>
+    </div>
+    
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeErrorModal">&times;</span>
+            <p>Failed to send message. Please try again later.</p>
+        </div>
+    </div>
+
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container text-center">
+    </div>
+    <div>
+      <p>&copy; 2024 Ravis Cabinets. All rights reserved. Developed by <a href="https://www.rahuldawpersad.com"
+          target="_blank">www.rahuldawpersad.com</a>.</p>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/SmoothScroll.js"></script>
+  <script type="text/javascript" src="js/nivo-lightbox.js"></script>
+  <script type="text/javascript" src="js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+  <script type="text/javascript" src="js/contact_me.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+  <script type="text/javascript">
+    // Initialize EmailJS
+    (function () {
+      emailjs.init("xQCZiOllMeSiZKlJ6"); // Replace with your EmailJS Public Key
+    })();
+
+    // Form and Element References
+    const form = document.getElementById('contact-form');
+    const nameInput = form.querySelector("#fullName");
+    const emailInput = form.querySelector("#email");
+    const messageInput = form.querySelector("#message");
+
+    const nameError = form.querySelector("#nameError");
+    const emailError = form.querySelector("#emailError");
+    const messageError = form.querySelector("#messageError");
+
+    const successModal = document.getElementById("successModal");
+    const errorModal = document.getElementById("errorModal");
+    const closeSuccessModal = document.getElementById("closeSuccessModal");
+    const closeErrorModal = document.getElementById("closeErrorModal");
+
+    // Modal Handling
+    function closeModal(modal) {
+      modal.style.display = "none";
+    }
+
+    closeSuccessModal.onclick = () => closeModal(successModal);
+    closeErrorModal.onclick = () => closeModal(errorModal);
+
+    window.onclick = (event) => {
+      if (event.target == successModal) closeModal(successModal);
+      if (event.target == errorModal) closeModal(errorModal);
+    }
+
+    // Validation Functions
+    function validateName(name) {
+      const namePattern = /^[A-Z][a-z]+(?: [A-Z][a-z]+)*$/;
+      return namePattern.test(name);
+    }
+
+    function validateEmail(email) {
+      const normalizedEmail = email.toLowerCase();
+      const emailPattern = /^[a-z0-9]+@(gmail\.com|gmail\.co\.za)$/;
+      return emailPattern.test(normalizedEmail);
+    }
+
+    function validateMessage(message) {
+      return message.length > 15;
+    }
+
+    function validateField(field, value) {
+      let valid = false;
+      let errorMessage = "";
+
+      switch (field) {
+        case 'name':
+          valid = validateName(value);
+          errorMessage = valid ? "" : "Invalid name. Please enter a valid name.";
+          break;
+        case 'email':
+          valid = validateEmail(value);
+          errorMessage = valid ? "" : "Invalid email. Please enter a valid Gmail address.";
+          break;
+        case 'message':
+          valid = validateMessage(value);
+          errorMessage = valid ? "" : "Message must be more than 15 characters.";
+          break;
+      }
+
+      return { valid, errorMessage };
+    }
+
+    function validateForm() {
+      let isValid = true;
+
+      const nameValidation = validateField('name', nameInput.value.trim());
+      nameError.innerHTML = nameValidation.errorMessage;
+      isValid = isValid && nameValidation.valid;
+
+      const emailValidation = validateField('email', emailInput.value.trim());
+      emailError.innerHTML = emailValidation.errorMessage;
+      isValid = isValid && emailValidation.valid;
+
+      const messageValidation = validateField('message', messageInput.value.trim());
+      messageError.innerHTML = messageValidation.errorMessage;
+      isValid = isValid && messageValidation.valid;
+
+      return isValid;
+    }
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!validateForm()) return false;
+
+      emailjs.sendForm('service_j5wcnj9', 'template_zhxnmui', this)
+        .then(() => {
+          successModal.style.display = "block";
+          form.reset();
+        })
+        .catch(() => {
+          errorModal.style.display = "block";
+        });
+    });
+
+    // Real-time Validation
+    nameInput.addEventListener('input', () => {
+      const validation = validateField('name', nameInput.value.trim());
+      nameError.innerHTML = validation.errorMessage;
+    });
+
+    emailInput.addEventListener('input', () => {
+      emailInput.value = emailInput.value.toLowerCase();
+      const validation = validateField('email', emailInput.value.trim());
+      emailError.innerHTML = validation.errorMessage;
+    });
+
+    messageInput.addEventListener('input', () => {
+      const validation = validateField('message', messageInput.value.trim());
+      messageError.innerHTML = validation.errorMessage;
+    });
+
+    // Navbar Handling
+    (function ($) {
+      $(function () {
+        $("#navbar-toggle").click(function () {
+          $("nav ul").slideToggle();
+          this.classList.toggle("active");
+        });
+
+        $("nav ul li a:not(:only-child)").click(function (e) {
+          $(this).siblings(".navbar-dropdown").slideToggle("slow");
+          $(".navbar-dropdown").not($(this).siblings()).hide("slow");
+          e.stopPropagation();
+        });
+
+        $("html").click(function () {
+          $(".navbar-dropdown").hide();
+        });
+      });
+    })(jQuery);
+  </script>
+</body>
+
+</html>
